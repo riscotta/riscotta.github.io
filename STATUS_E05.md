@@ -8,10 +8,12 @@ Estado: em trabalho.
 - página do livro;
 - página sobre o autor;
 - página de errata;
+- página de privacidade;
 - folha de estilos responsiva;
 - página 404;
 - formulário Brevo integrado à página inicial;
-- chamada para cadastro adicionada à página do livro.
+- chamada para cadastro adicionada à página do livro;
+- política de privacidade vinculada ao formulário e ao rodapé do site.
 
 ## Captura
 
@@ -27,6 +29,17 @@ Estado: em trabalho.
 - contato de teste confirmado na lista `Livro Bayes — Interessados`;
 - e-mail final de confirmação recebido na caixa de entrada do Gmail.
 
+## Privacidade
+
+- controlador informado: Ricardo Scotta;
+- contato de privacidade: `livros@ricardoscotta.com.br`;
+- coleta declarada: endereço de e-mail e registro de consentimento/double opt-in;
+- finalidades limitadas a comunicações sobre o livro, publicação, materiais, atualizações, erratas e conteúdos autorais relacionados;
+- Brevo identificada como plataforma operacional do formulário, lista e envio;
+- GitHub Pages identificado como hospedagem do site;
+- direitos do titular, revogação do consentimento, retenção e eliminação descritos;
+- ausência atual de analytics próprios, pixels publicitários e perfilamento registrada.
+
 ## Evidência e risco de entregabilidade
 
 O primeiro e-mail de double opt-in do teste foi classificado como spam pelo Gmail, apesar do domínio e do remetente estarem autenticados. O e-mail final, enviado após a confirmação, chegou à caixa de entrada. Registrar como risco de reputação inicial de domínio/remetente novo, não como falha funcional do fluxo.
@@ -41,7 +54,6 @@ O desenvolvimento ocorre na branch `e05-site-captura`. O conteúdo do site ainda
 
 ## Pendências para concluir a E05
 
-- criar a página de privacidade coerente com o tratamento efetivo dos dados;
 - configurar e testar o domínio autoral no GitHub Pages;
 - validar a navegação em desktop e mobile;
 - publicar a versão aprovada do site somente após essas validações.
