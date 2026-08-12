@@ -1,6 +1,6 @@
 # E05 — Site e captura
 
-Estado: em trabalho.
+Estado: **APROVADA PARA PUBLICAÇÃO** em 12/08/2026.
 
 ## Estrutura criada
 
@@ -40,20 +40,48 @@ Estado: em trabalho.
 - direitos do titular, revogação do consentimento, retenção e eliminação descritos;
 - ausência atual de analytics próprios, pixels publicitários e perfilamento registrada.
 
+## Domínio e GitHub Pages
+
+- domínio autoral `ricardoscotta.com.br` verificado na conta GitHub;
+- domínio customizado configurado no GitHub Pages;
+- arquivo `CNAME` criado na raiz com `ricardoscotta.com.br`;
+- DNS do domínio raiz apontado para os quatro endereços IPv4 oficiais do GitHub Pages;
+- `www` configurado por CNAME para `riscotta.github.io`;
+- DNS check do GitHub: aprovado;
+- certificado TLS aprovado para `ricardoscotta.com.br` e `www.ricardoscotta.com.br`;
+- HTTPS forçado;
+- site acessível em `https://ricardoscotta.com.br/`.
+
+## Validação visual e funcional
+
+Validação executada em 12/08/2026:
+
+- Home em desktop: aprovada;
+- Home em mobile, largura simulada de 414 px: aprovada;
+- formulário Brevo em mobile: aprovado, sem overflow horizontal;
+- navegação mobile: `Livro`, `Sobre`, `Errata` e `Privacidade` aprovadas;
+- links e layout sem falhas reportadas nos testes finais.
+
 ## Evidência e risco de entregabilidade
 
 O primeiro e-mail de double opt-in do teste foi classificado como spam pelo Gmail, apesar do domínio e do remetente estarem autenticados. O e-mail final, enviado após a confirmação, chegou à caixa de entrada. Registrar como risco de reputação inicial de domínio/remetente novo, não como falha funcional do fluxo.
 
-## Gate de captura
+## Gates
 
-**APROVADO** — formulário, consentimento, double opt-in, confirmação e inclusão na lista foram validados de ponta a ponta.
+- **Gate de captura: APROVADO** — formulário, consentimento, double opt-in, confirmação e inclusão na lista validados de ponta a ponta.
+- **Gate de domínio/HTTPS: APROVADO** — domínio verificado, DNS resolvido, TLS aprovado e HTTPS forçado.
+- **Gate responsivo/navegação: APROVADO** — desktop, mobile, formulário e páginas principais validados.
 
 ## Governança
 
-O desenvolvimento ocorre na branch `e05-site-captura`. O conteúdo do site ainda não foi liberado para publicação pela branch `main`.
+O desenvolvimento e os testes finais ocorreram na branch `e05-site-captura`, preservando a `main` até a aprovação dos gates. A branch está liberada para integração na `main`.
 
-## Pendências para concluir a E05
+## Pendência operacional final
 
-- configurar e testar o domínio autoral no GitHub Pages;
-- validar a navegação em desktop e mobile;
-- publicar a versão aprovada do site somente após essas validações.
+Após a integração da branch na `main`, alterar a fonte do GitHub Pages de `e05-site-captura / (root)` para `main / (root)` e confirmar o novo deploy sem regressão.
+
+## Próxima etapa
+
+**E06 — GitHub Pages**: publicar e organizar a versão aberta técnica e os materiais complementares sob o endereço profissional.
+
+Etapa final do plano: **E11 — Manutenção**.
