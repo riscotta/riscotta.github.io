@@ -1,6 +1,6 @@
 # E05 — Site e captura
 
-Estado: **APROVADA PARA PUBLICAÇÃO** em 12/08/2026.
+Estado: **CONCLUÍDA E APROVADA** em 12/08/2026.
 
 ## Estrutura criada
 
@@ -71,14 +71,11 @@ O primeiro e-mail de double opt-in do teste foi classificado como spam pelo Gmai
 - **Gate de captura: APROVADO** — formulário, consentimento, double opt-in, confirmação e inclusão na lista validados de ponta a ponta.
 - **Gate de domínio/HTTPS: APROVADO** — domínio verificado, DNS resolvido, TLS aprovado e HTTPS forçado.
 - **Gate responsivo/navegação: APROVADO** — desktop, mobile, formulário e páginas principais validados.
+- **Gate de publicação: APROVADO** — PR #1 integrado à `main`, GitHub Pages configurado em `main / (root)` e deploy final confirmado com status `built`.
 
 ## Governança
 
-O desenvolvimento e os testes finais ocorreram na branch `e05-site-captura`, preservando a `main` até a aprovação dos gates. A branch está liberada para integração na `main`.
-
-## Pendência operacional final
-
-Após a integração da branch na `main`, alterar a fonte do GitHub Pages de `e05-site-captura / (root)` para `main / (root)` e confirmar o novo deploy sem regressão.
+O desenvolvimento e os testes finais ocorreram na branch `e05-site-captura`, preservando a `main` até a aprovação dos gates. A publicação aprovada foi integrada à `main` pelo PR #1. O GitHub Pages publica atualmente a partir de `main / (root)`.
 
 ## Próxima etapa
 
