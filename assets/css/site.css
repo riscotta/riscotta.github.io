@@ -108,8 +108,15 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; }
   overflow: hidden;
 }
 .form-shell iframe { width: 100%; border: 0; }
+.privacy-note { margin-top: 1rem; font-size: .95rem !important; }
+
+.legal-copy h2 { margin-top: 2.6rem; font-size: clamp(1.45rem, 3vw, 2rem); }
+.legal-copy p { color: var(--text); }
 
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--muted); font-size: .95rem; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.site-footer a { color: var(--muted); }
+.site-footer a:hover, .site-footer a:focus { color: var(--accent); }
 
 @media (max-width: 760px) {
   .header-inner { align-items: flex-start; padding: .9rem 0; flex-direction: column; gap: .5rem; }
