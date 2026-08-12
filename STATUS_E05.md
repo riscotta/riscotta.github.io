@@ -9,7 +9,17 @@ Estado: em trabalho.
 - página sobre o autor;
 - página de errata;
 - folha de estilos responsiva;
-- página 404.
+- página 404;
+- formulário Brevo integrado à página inicial;
+- chamada para cadastro adicionada à página do livro.
+
+## Captura
+
+- formulário: `Livro Bayes — Lista de interessados`;
+- lista: `Livro Bayes — Interessados`;
+- consentimento LGPD habilitado;
+- confirmação por double opt-in configurada;
+- integração via iframe Brevo.
 
 ## Governança
 
@@ -17,7 +27,6 @@ O desenvolvimento ocorre na branch `e05-site-captura`. O conteúdo do site ainda
 
 ## Pendências para o gate
 
-- integrar o formulário real de cadastro da Brevo;
 - criar a página de privacidade coerente com o tratamento efetivo dos dados;
 - configurar e testar o domínio autoral;
 - testar o fluxo de double opt-in de ponta a ponta;
