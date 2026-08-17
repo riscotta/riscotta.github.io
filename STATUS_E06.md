@@ -13,7 +13,8 @@ A versão técnica foi integrada ao mesmo repositório do domínio autoral, `ris
 Motivos:
 - o domínio autoral e o GitHub Pages já estão operacionais e validados;
 - a E01 prevê um único domínio profissional;
-- a E02 já definiu e validou a estrutura pública segura, sem capítulos integrais.
+- a E02 definiu uma estrutura pública segura, sem capítulos integrais;
+- a E06 preserva a separação entre o site autoral da E05 e a camada técnica versionada.
 
 A fonte privada de produção, o manuscrito canônico e o EPUB RC07 não foram reabertos nem publicados.
 
@@ -30,15 +31,36 @@ A fonte privada de produção, o manuscrito canônico e o EPUB RC07 não foram r
 
 Nenhum capítulo integral foi publicado porque não há autorização autoral explícita registrada para uma liberação específica. Novas liberações devem ser versionadas e passar pelas verificações de direitos e proveniência aplicáveis.
 
+## Reconciliação de 17/08/2026
+
+A implementação realizada no PR #2 foi confrontada com o estado canônico herdado da E05 e com o fechamento aprovado da E02.
+
+Resultado:
+- PR #2 permanece mesclado na `main` pelo commit `bbadf92591e75886cc7c902528432bbf4eb9fcc8`;
+- a implementação não reabriu o manuscrito canônico nem o EPUB RC07;
+- nenhum capítulo integral foi publicado;
+- a arquitetura em `/bayes-r-stan/` preserva a Home autoral e separa a camada técnica;
+- o sitemap inclui as três rotas canônicas da camada técnica;
+- não foi identificada divergência que justifique rollback do PR #2.
+
+O workflow `pages build and deployment` #11 (`32046705239`) permaneceu preso em `queued` após uma primeira falha de deploy por HTTP 503. Em nova verificação, GitHub Actions e GitHub Pages estavam operacionais, mas o rerun do workflow foi recusado porque o GitHub ainda o considerava em execução.
+
+Este registro cria um novo checkpoint real da E06 e permite nova tentativa automática de deploy sem alteração do conteúdo técnico.
+
 ## Gate
 
-Pendente até:
+Concluído:
 - merge da branch `e06-github-pages` em `main`;
-- deploy GitHub Pages com status `built`;
+- reconciliação do escopo da E06 com as fontes vigentes.
+
+Pendente:
+- deploy GitHub Pages concluído com sucesso para o estado atual da `main`;
 - verificação HTTP das novas rotas no domínio profissional.
+
+A E06 não deve ser marcada como concluída antes desses dois itens.
 
 ## Próxima etapa
 
-**E07 — Metadados e página comercial**.
+Após aprovação do gate: **E07 — Metadados e página comercial**.
 
 Etapa final do plano: **E11 — Manutenção**.
