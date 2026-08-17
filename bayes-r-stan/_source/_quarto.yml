@@ -1,0 +1,21 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Estatística Bayesiana com R e Stan"
+  author: "Ricardo Scotta"
+  chapters:
+    - index.qmd
+    - conteudo-liberado.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+
+lang: pt-BR
+
+execute:
+  enabled: false
