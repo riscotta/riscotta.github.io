@@ -43,21 +43,25 @@ Resultado:
 - o sitemap inclui as três rotas canônicas da camada técnica;
 - não foi identificada divergência que justifique rollback do PR #2.
 
-O workflow `pages build and deployment` #11 (`32046705239`) permaneceu preso em `queued` após uma primeira falha de deploy por HTTP 503. Em nova verificação, GitHub Actions e GitHub Pages estavam operacionais, mas o rerun do workflow foi recusado porque o GitHub ainda o considerava em execução.
+O workflow `pages build and deployment` #11 (`32046705239`) permaneceu preso em `queued` após uma primeira falha de deploy por HTTP 503. O GitHub continuou tratando essa execução como ativa e impediu seu cancelamento/rerun normal.
 
-Este registro cria um novo checkpoint real da E06 e permite nova tentativa automática de deploy sem alteração do conteúdo técnico.
+Uma nova alteração na `main` gerou o workflow `pages build and deployment` #12. Em 17/08/2026, a interface do GitHub Actions registrou o #12 como concluído com sucesso (check verde, duração de 48 s). Como o #12 é posterior ao #11 e concluiu normalmente sobre a `main`, o #11 passa a ser tratado como execução órfã/superseded e não como bloqueador da E06.
 
 ## Gate
 
 Concluído:
 - merge da branch `e06-github-pages` em `main`;
-- reconciliação do escopo da E06 com as fontes vigentes.
+- reconciliação do escopo da E06 com as fontes vigentes;
+- deploy GitHub Pages concluído com sucesso em execução posterior (#12), tornando o #11 órfão/superseded;
+- presença, na `main`, das três páginas HTML canônicas da camada técnica.
 
 Pendente:
-- deploy GitHub Pages concluído com sucesso para o estado atual da `main`;
-- verificação HTTP das novas rotas no domínio profissional.
+- verificação HTTP das três rotas no domínio profissional:
+  - `/bayes-r-stan/`;
+  - `/bayes-r-stan/conteudo/`;
+  - `/bayes-r-stan/reproducibilidade/`.
 
-A E06 não deve ser marcada como concluída antes desses dois itens.
+A E06 deve ser marcada como concluída após a confirmação de que essas três rotas abrem corretamente no domínio profissional.
 
 ## Próxima etapa
 
