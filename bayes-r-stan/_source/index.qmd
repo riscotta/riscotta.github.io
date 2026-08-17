@@ -1,0 +1,12 @@
+---
+title: "Estatística Bayesiana com R e Stan"
+author: "Ricardo Scotta"
+---
+
+Esta é a fonte pública da camada técnica navegável do livro.
+
+A infraestrutura foi publicada na E06. A liberação de capítulos é progressiva e depende de autorização autoral explícita. Nenhum capítulo integral foi incluído na versão inicial da E06.
+
+- **Edição comercial:** será preparada separadamente para publicação digital.
+- **Código e dados:** serão publicados somente após auditoria de direitos e proveniência.
+- **Errata:** é mantida em página pública e versionada.
