@@ -1,6 +1,6 @@
 # E06 — GitHub Pages
 
-Estado: **EM VALIDAÇÃO** em 17/08/2026.
+Estado: **CONCLUÍDA E APROVADA** em 17/08/2026.
 
 ## Objetivo
 
@@ -45,26 +45,24 @@ Resultado:
 
 O workflow `pages build and deployment` #11 (`32046705239`) permaneceu preso em `queued` após uma primeira falha de deploy por HTTP 503. O GitHub continuou tratando essa execução como ativa e impediu seu cancelamento/rerun normal.
 
-Uma nova alteração na `main` gerou o workflow `pages build and deployment` #12. Em 17/08/2026, a interface do GitHub Actions registrou o #12 como concluído com sucesso (check verde, duração de 48 s). Como o #12 é posterior ao #11 e concluiu normalmente sobre a `main`, o #11 passa a ser tratado como execução órfã/superseded e não como bloqueador da E06.
+Uma nova alteração na `main` gerou o workflow `pages build and deployment` #12. Em 17/08/2026, a interface do GitHub Actions registrou o #12 como concluído com sucesso (check verde, duração de 48 s). Como o #12 é posterior ao #11 e concluiu normalmente sobre a `main`, o #11 é tratado como execução órfã/superseded e não como bloqueador da E06.
 
-## Gate
+## Gate final
 
-Concluído:
+Concluído e aprovado:
 - merge da branch `e06-github-pages` em `main`;
 - reconciliação do escopo da E06 com as fontes vigentes;
 - deploy GitHub Pages concluído com sucesso em execução posterior (#12), tornando o #11 órfão/superseded;
-- presença, na `main`, das três páginas HTML canônicas da camada técnica.
+- presença, na `main`, das três páginas HTML canônicas da camada técnica;
+- confirmação autoral, em 17/08/2026, de que as três rotas públicas abriram normalmente no domínio profissional:
+  - `https://ricardoscotta.com.br/bayes-r-stan/`;
+  - `https://ricardoscotta.com.br/bayes-r-stan/conteudo/`;
+  - `https://ricardoscotta.com.br/bayes-r-stan/reproducibilidade/`.
 
-Pendente:
-- verificação HTTP das três rotas no domínio profissional:
-  - `/bayes-r-stan/`;
-  - `/bayes-r-stan/conteudo/`;
-  - `/bayes-r-stan/reproducibilidade/`.
-
-A E06 deve ser marcada como concluída após a confirmação de que essas três rotas abrem corretamente no domínio profissional.
+Não há bloqueadores abertos na E06.
 
 ## Próxima etapa
 
-Após aprovação do gate: **E07 — Metadados e página comercial**.
+**E07 — Metadados e página comercial**.
 
 Etapa final do plano: **E11 — Manutenção**.
