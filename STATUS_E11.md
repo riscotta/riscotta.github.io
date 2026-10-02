@@ -8,11 +8,13 @@ Manter *Estatística Bayesiana com R e Stan* saudável como obra publicada e tra
 
 ## E11.1 — Site como portfólio autoral
 
+Estado: **CONCLUÍDA E APROVADA** em 02/10/2026.
+
 Branch de trabalho: `e11-site-portfolio-autoral`.
 
-PR: #4 — **E11 — Evoluir site para portfólio autoral**.
+PR: #4 — **E11 — Evoluir site para portfólio autoral** — integrado à `main`.
 
-### Alterações preparadas
+### Entregas concluídas
 
 - Home reposicionada de página centrada em um único livro para apresentação autoral;
 - criação de `/livros/` como catálogo;
@@ -22,24 +24,20 @@ PR: #4 — **E11 — Evoluir site para portfólio autoral**.
 - integração editorial com artigos, posts e newsletter *Estatística sob Incerteza*;
 - página Sobre atualizada para refletir produção autoral contínua;
 - errata organizada por obra;
-- política de privacidade preparada para comunicações editoriais mais amplas;
+- política de privacidade atualizada para comunicações editoriais mais amplas;
 - sitemap atualizado;
-- componentes de portfólio adicionados ao CSS.
+- componentes de portfólio adicionados ao CSS;
+- formulário Brevo atualizado para o novo escopo editorial, com consentimento explícito e double opt-in preservado;
+- revisão visual e funcional concluída pelo autor.
 
-## Dependência antes do merge
+### Gate E11.1
 
-O formulário incorporado é gerenciado no Brevo. Antes de integrar o PR, revisar no Brevo:
-
-1. nome interno do formulário;
-2. título e texto exibidos;
-3. declaração/checkbox de consentimento;
-4. finalidade do cadastro;
-5. e-mail de confirmação double opt-in;
-6. lista de destino, se for renomeada.
-
-A finalidade deve corresponder ao novo sistema editorial: livros, novos projetos, materiais complementares, atualizações, erratas e outros conteúdos autorais relacionados.
-
-O double opt-in deve permanecer ativo.
+**APROVADO**:
+- formulário Brevo coerente com a nova finalidade;
+- PR revisado;
+- links principais testados;
+- PR integrado à `main`;
+- deploy do GitHub Pages validado em desktop e mobile.
 
 ## Estado do livro publicado no início da E11
 
@@ -50,11 +48,11 @@ O double opt-in deve permanecer ativo.
 - nenhuma errata registrada;
 - campanha inicial de lançamento encerrada em 02/10/2026.
 
-## Próximo gate
+## Próxima frente — E11.2
 
-**Gate E11.1 — Portfólio autoral publicado**:
-- formulário Brevo coerente com a nova finalidade;
-- PR revisado visualmente;
-- links principais testados;
-- PR integrado à `main`;
-- deploy do GitHub Pages validado em desktop e mobile.
+Definir o protocolo recorrente de manutenção do catálogo e a integração editorial com o próximo livro:
+
+1. periodicidade de acompanhamento de vendas, avaliações, dúvidas e erratas;
+2. critérios objetivos para abertura de uma Revisão 02;
+3. regra para menções naturais ao livro publicado em artigos, posts e newsletter;
+4. transição para o novo projeto do próximo livro, mantendo este repositório como infraestrutura autoral e de catálogo.
