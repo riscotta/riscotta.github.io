@@ -40,7 +40,7 @@ a { color: var(--accent); }
 .brand { color: var(--text); text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
 nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
-nav a:hover, nav a:focus { color: var(--accent); }
+nav a:hover, nav a:focus, nav a[aria-current="page"] { color: var(--accent); }
 
 .hero { padding: 7rem 0 6rem; }
 .hero-grid {
@@ -57,11 +57,12 @@ nav a:hover, nav a:focus { color: var(--accent); }
   letter-spacing: .08em;
   font-size: .78rem;
 }
-h1, h2 { line-height: 1.12; letter-spacing: -.035em; }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -.035em; }
 h1 { font-size: clamp(2.7rem, 7vw, 5.7rem); margin: 0 0 1.5rem; max-width: 850px; }
 h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; }
+h3 { font-size: 1.65rem; margin: 0 0 1rem; }
 .lead { font-size: clamp(1.12rem, 2vw, 1.35rem); color: var(--muted); max-width: 760px; }
-.actions { margin-top: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.actions, .card-actions { margin-top: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .button {
   display: inline-block;
   padding: .85rem 1.1rem;
@@ -72,9 +73,11 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; }
   font-weight: 700;
 }
 .button:hover, .button:focus { background: var(--accent-dark); }
+.secondary-button { background: var(--accent-dark); }
 .text-link { font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 
-.book-card {
+.book-card,
+.author-card {
   aspect-ratio: 5 / 8;
   background: var(--accent-dark);
   color: #fff;
@@ -85,7 +88,8 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; }
   justify-content: flex-end;
   box-shadow: 0 18px 50px rgba(0,0,0,.15);
 }
-.book-card strong { font-size: 2rem; line-height: 1.05; margin: .25rem 0 1.3rem; }
+.book-card strong,
+.author-card strong { font-size: 2rem; line-height: 1.05; margin: .25rem 0 1.3rem; }
 .book-label { font-size: 1rem; opacity: .85; }
 
 .section { padding: 5rem 0; border-top: 1px solid var(--line); }
@@ -93,6 +97,35 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; }
 .page { padding: 5rem 0 6rem; }
 .page h1 { font-size: clamp(2.5rem, 6vw, 4.7rem); }
 .meta { color: var(--muted); }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.page-grid { margin-top: 3rem; }
+.portfolio-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.portfolio-card h2,
+.portfolio-card h3 { max-width: 620px; }
+.portfolio-card p { color: var(--muted); }
+.card-kicker {
+  margin: 0 0 .75rem;
+  color: var(--accent) !important;
+  font-size: .78rem !important;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.muted-card { background: transparent; border-style: dashed; }
+.back-link { margin-top: 3rem; }
+.book-status { margin-top: 3rem; }
+
 .status-box {
   margin: 2rem 0;
   padding: 1.25rem 1.4rem;
@@ -121,7 +154,9 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; }
 @media (max-width: 760px) {
   .header-inner { align-items: flex-start; padding: .9rem 0; flex-direction: column; gap: .5rem; }
   .hero { padding: 4rem 0; }
-  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .book-card { max-width: 320px; }
+  .hero-grid,
+  .portfolio-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .book-card,
+  .author-card { max-width: 320px; }
   .form-shell { margin-left: -0.5rem; margin-right: -0.5rem; }
 }
